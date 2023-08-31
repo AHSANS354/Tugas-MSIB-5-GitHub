@@ -1,2 +1,2 @@
 # msib5
-ini adalah github pertama untuk msib batch ke 5
+ini adalah tugas github pertama untuk msib batch ke 5
