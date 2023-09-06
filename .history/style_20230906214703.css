@@ -1,0 +1,10 @@
+body {
+  background-image: url("gambar.jpg");
+  background-size: 100% 250px;
+  background-repeat: no-repeat;
+}
+
+.nom {
+  background-color: whitesmoke;
+  padding: 10px;
+}
