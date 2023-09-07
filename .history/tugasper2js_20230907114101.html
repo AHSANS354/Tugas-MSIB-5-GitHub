@@ -1,0 +1,22 @@
+<script>
+  // data
+  const nama = "Ridwan";
+  const jabatan = "Manager";
+  const status = "Menikah";
+  let gajipokok = 0;
+
+  switch (jabatan) {
+    case "Manager":
+      gajipokok = 15000000;
+      break;
+    case "Asisten Manager":
+      gajipokok = 10000000;
+      break;
+    case "Staff":
+      gajipokok = 5000000;
+      break;
+    default:
+      gajipokok = 0;
+  }
+  document.write("Nama : " + nama + "<br> Jabatan : " + jabatan + "<br> Status : " + status + "<br> Gaji Pokok : " + gajipokok);
+</script>
