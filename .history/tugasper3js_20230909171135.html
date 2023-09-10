@@ -1,0 +1,67 @@
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>agama</th>
+      <th>Gaji pokok</th>
+    </tr>
+  </thead>
+  <tbody>
+    <script>
+      let p1 = { nama: "pegawai1" };
+      let p2 = { nama: "pegawai2" };
+      let p3 = { nama: "pegawai3" };
+      let p4 = { nama: "pegawai5" };
+      let p5 = { nama: "pegawai6" };
+      let p6 = { nama: "pegawai8" };
+      let p7 = { nama: "pegawai9" };
+      let p8 = { nama: "pegawai10" };
+
+      let pegawai = [p1, p2, p3, p4, p5, p6, p7, p8];
+      let jabatan = "";
+
+      document.write(pegawai.nama);
+
+      if (pegawai.nama == "pegawai1" && pegawai.nama == "pegawai2") jabatan = "Manager";
+      else if (pegawai == "pegawai3" && pegawai == "pegawai5") jabatan = "Asisten Manager";
+      else if (pegawai == "pegawai6" && pegawai == "pegawai8") jabatan = "Supervisor";
+      else if (pegawai == "pegawai9" && pegawai == "pegawai10") jabatan = "Staff";
+      else jabatan = "";
+
+      let gapok = "";
+
+      switch (jabatan) {
+        case "Manager":
+          gapok = 15000000;
+          break;
+        case "Asisten Manager":
+          gapok = 10000000;
+          break;
+        case "Supervisor":
+          gapok = 7000000;
+          break;
+        case "Staff":
+          gapok = 4000000;
+          break;
+        default:
+          gapok = 0;
+          break;
+      }
+
+      let tunjangan_jabatan = 0.2 * gapok;
+      let tunjangan_kes = 0.1 * gapok;
+      let gaji_kotor = gapok + tunjangan_jabatan + tunjangan_kes;
+      let agama = pegawai.length % 2 == 1 ? "Muslim" : "Non Muslim";
+
+      let no = 1;
+      for (s of pegawai) {
+        document.write(`<tr>
+                    <td>${no++}</td>
+                    <td>${s.nama}</td>
+                    <td>${jabatan}</td>
+                    <td>${gapok}</td></tr>`);
+      }
+    </script>
+  </tbody>
+</table>
