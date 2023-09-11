@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Pertemuan ke-4</title>
+    <style>
+      .container {
+        padding: 10px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .col {
+        padding-left: 500pc;
+        width: 100%;
+        display: flex;
+        padding: 5px;
+      }
+      label {
+        width: 200px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="toko">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Form Toko Online</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="nama">Nama Pelanggan: </label>
+            <input type="text" name="nama" placeholder="masukkan nama anda" />
+          </div>
+          <div class="col">
+            <label for="produk">Produk: </label>
+            <select name="produk">
+              <option value="" id="produk">Pilih Produk</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="jumlah">Quantity: </label>
+            <input type="number" name="jumlah" placeholder="Jumlah Beli" />
+          </div>
+          <div class="col">
+            <button type="submit" name="proses">Beli</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
