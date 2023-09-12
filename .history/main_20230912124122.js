@@ -37,11 +37,5 @@ function tokoOnline() {
   let bayar = total - diskon + PPN;
 
   alert(`Nama Pelanggan : ${nama}
-  Produk : ${produk}
-  Harga satuan : ${harga}
-  Quantity : ${jumlah}
-  Harga kotor : ${total}
-  Diskon : ${diskon}
-  PPN : ${PPN}
-  Pembayaran : ${bayar}`);
+  /n Produk : ${produk}`);
 }

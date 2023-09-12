@@ -27,21 +27,5 @@ function tokoOnline() {
 
   if (produk == "Kulkas" && jumlah >= 3) {
     diskon = total * 0.3;
-  } else if (produk == "AC" && jumlah >= 3) {
-    diskon = total * 0.2;
-  } else {
-    diskon = total * 0.1;
   }
-
-  let PPN = (total - diskon) * 0.1;
-  let bayar = total - diskon + PPN;
-
-  alert(`Nama Pelanggan : ${nama}
-  Produk : ${produk}
-  Harga satuan : ${harga}
-  Quantity : ${jumlah}
-  Harga kotor : ${total}
-  Diskon : ${diskon}
-  PPN : ${PPN}
-  Pembayaran : ${bayar}`);
 }
