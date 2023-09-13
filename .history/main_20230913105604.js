@@ -1,5 +1,5 @@
 let forms = document.getElementById("toko");
-let produkpilihan = ["TV", "AC", "Kulkas"];
+let produkpilihan = ("TV", "AC", "Kulkas");
 let pilihproduk = '<option value=""><--- Pilihan Produk ---></option>';
 for (let p in produkpilihan) {
   pilihproduk += `<option value="${produkpilihan[p]}">${produkpilihan[p]}</option>`;
@@ -42,7 +42,7 @@ function tokoOnline() {
   let PPN = (total - diskon) * 0.1;
   let bayar = total - diskon + PPN;
 
-  swal(`Nama Pelanggan : ${nama}
+  alert(`Nama Pelanggan : ${nama}
   Produk : ${produk}
   Harga satuan : ${harga}
   Quantity : ${jumlah}

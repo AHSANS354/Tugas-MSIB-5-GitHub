@@ -42,7 +42,7 @@ function tokoOnline() {
   let PPN = (total - diskon) * 0.1;
   let bayar = total - diskon + PPN;
 
-  swal(`Nama Pelanggan : ${nama}
+  swal.fire(`Nama Pelanggan : ${nama}
   Produk : ${produk}
   Harga satuan : ${harga}
   Quantity : ${jumlah}

@@ -1,0 +1,28 @@
+<script>
+  class Bank {
+    constructor(norek, nasabah, saldo) {
+      this.no = norek;
+      this.nama = nasabah;
+      this.saldo = saldo;
+    }
+    menabung(uang) {
+      this.saldo += uang;
+    }
+    menarik(uang) {
+      this.saldo -= uang;
+    }
+    mencetak() {
+      document.write("No.Rekening : <br>", this.no);
+      document.write("Nama Nasabah : <br>", this.nama);
+      document.write("Saldo Akhir : <br>", this.saldo);
+      document.write("--------------------");
+    }
+  }
+  let n1 = new Bank("011", "Bukti", 50000);
+  let n2 = new Bank("002", "Dewi", 150000);
+  let n3 = new Bank("003", "Andi", 300000);
+
+  n1.menabung(20000);
+
+  n1.mencetak();
+</script>
