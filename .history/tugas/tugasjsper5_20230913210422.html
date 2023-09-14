@@ -1,0 +1,19 @@
+<script>
+  class Gempa {
+    constructor(lokasi, skala) {
+      this.lokasi = lokasi;
+      this.skala = skala;
+    }
+    dampak() {
+      if (skala <= 2) {
+        document.write("dampak tidak terasa");
+      } else if (skala >= 2 && skala <= 4) {
+        document.write("dampak bangunan retak-retak");
+      } else if (skala >= 4 && skala <= 6) {
+        document.write("dampak bangunan roboh");
+      } else if (skala > 6) {
+        document.write("dampak bangunan roboh dan berpotensi tsunami");
+      }
+    }
+  }
+</script>
