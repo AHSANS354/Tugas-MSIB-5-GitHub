@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+      .row {
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      input {
+        border: none;
+        background-color: darkcyan;
+        color: whitesmoke;
+        padding: 10px 10px;
+      }
+      #cetak {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input type="submit" value="Profil" id="div1" />
+        </div>
+        <div class="col">
+          <input type="submit" value="Moto" />
+        </div>
+        <div class="col">
+          <input type="submit" value="Keahlian" />
+        </div>
+      </div>
+      <div id="cetak"></div>
+    </div>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("#div1").on("click", function () {
+          $("#cetak").html(`<h3>Profil</h3>`);
+        });
+      });
+    </script>
+  </body>
+</html>
