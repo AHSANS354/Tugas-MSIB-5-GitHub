@@ -16,7 +16,7 @@
         text-shadow: 2px 2px #000;
     }
     .text-danger{
-        text-shadow: 2px 2px #000;
+        text-shadow: 2px 2px #fff;
     }
   </style>
   <body>
@@ -54,7 +54,7 @@
             header("location: admin.php");
             exit();
         }else{
-            echo "<div class='text-center text-danger fw-bold'>Username atau Password salah!</div>";
+            echo "<div class='text-center text-danger'>Username atau Password salah!</div>";
         }
     }
 
@@ -65,7 +65,7 @@
         if($username != "" && $password != ""){
             validation($username, $password);
         }else{
-            echo "<div class='text-center text-danger fw-bold'>Mohon isi terlebih dahulu!</div>";
+            echo "<div class='text-center text-danger'>Mohon isi terlebih dahulu!</div>";
         }
     }
     ?>
