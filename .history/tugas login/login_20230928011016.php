@@ -21,7 +21,7 @@
   </style>
   <body>
     <div class="container d-flex justify-content-center align-items-center p-5 mt-5">
-        <div class="row text-center rounded shadow-lg border">
+        <div class="row text-center border rounded shadow">
             <div class="col mt-4 mb-4 text-light">
                 <h1>MASUK</h1>
             </div>
