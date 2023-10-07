@@ -1,0 +1,15 @@
+//table vendor yang references ke table pembelian, dengan rincian kolom sebagai berikut: nomor,nama,kota,kontak
+CREATE TABLE vendor(
+-> nomor int primary key auto_increment,
+-> nama varchar(30) not null unique,
+-> kota varchar(20) not null,
+-> kontak varchar(12) not null);
+
+//table pembelian yang references ke produk dengan rincian kolom sebagai berikut: tanggal, nomor , produk_id, jumlah,harga, vendor_id
+CREATE TABLE pembelian(
+-> tanggal date not null,
+-> nomor int primary key auto_increment,
+-> produk_id int not null references produk(id),
+-> jumlah int not null,
+-> harga double not null,
+-> vendor_id int not null references vendor(nomor));
