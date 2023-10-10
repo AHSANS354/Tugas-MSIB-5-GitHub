@@ -74,16 +74,16 @@ SELECT * FROM produk WHERE kode LIKE 'K%' OR kode LIKE 'M%';
 SELECT * FROM produk WHERE kode NOT LIKE 'M%';
 
 3.	Tampilkan produk-produk televisi
-SELECT * FROM produk WHERE kategori = 'televisi';
+SELECT * FROM produk WHERE kode LIKE '%TV%';
 
 4.	Tampilkan pelanggan mengandung huruf 'SA'
 SELECT * FROM pelanggan WHERE nama LIKE '%SA%';
 
 5.	Tampilkan pelanggan yang lahirnya bukan di Jakarta dan mengandung huruf ‘yo‘
-SELECT * FROM pelanggan WHERE tmp_lahir != 'Jakarta' AND nama LIKE '%YO%’;
+SELECT * FROM pelanggan WHERE tmp_lahir NOT LIKE '%jakarta%' AND nama LIKE '%YO%’;
 
 6.	Tampilkan pelanggan yang karakter huruf ke – 2 nya adalah A
-SELECT * FROM pelanggan WHERE SUBSTRING(nama,2,1) = 'A';
+SELECT * FROM pelanggan WHERE nama LIKE '_A%';
 
 //soal 2.4
 1.	Tampilkan 2 data produk termahal
