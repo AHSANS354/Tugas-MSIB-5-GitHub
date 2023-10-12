@@ -1,0 +1,63 @@
+//soal 3.2
+3.	Berapa jumlah total stok semua produk yang harga jualnya dibawah 10rb
+SELECT SUM(stok) FROM barang WHERE harga_jual < '10';
+
+4.	Ada berapa produk yang mempunyai kode awal K
+SELECT COUNT(*) FROM barang WHERE kode LIKE "K%";
+
+5.	Berapa harga jual rata-rata produk yang diatas 1jt
+SELECT AVG(harga_jual) AS RATAJUAL FROM barang WHERE harga_jual >'10000
+
+6.	Tampilkan jumlah stok yang paling besar
+SELECT MAX(stok) as STOKMAX from barang;
+
+7.	Ada berapa produk yang stoknya kurang dari minimal stok
+SELECT COUNT(*) FROM barang WHERE stok<minimal_stok;
+
+8.	Berapa total asset dari keseluruhan produk
+SELECT SUM(harga_beli*stok + stok * ( SELECT harga_jual)) FROM barang WHERE id = barang
+
+//soal 3.3
+1.	Tampilkan data produk : id, nama, stok dan informasi jika stok telah sampai batas minimal atau kurang dari minimum stok dengan informasi ‘segera belanja’ jika tidak ‘stok aman’.
+SELECT id,nama,stok,
+CASE
+WHEN stok > min_stok THEN ‘aman’
+ELSE ‘Segera Belanja’
+END AS informasi FROM produk;
+
+2.	Tampilkan data pelanggan: id, nama, umur dan kategori umur : jika umur < 17 → ‘muda’ , 17-55 → ‘Dewasa’, selainnya ‘Tua’
+SELECT id,nama,umur,kategori,
+CASE
+WHEN umur 17 THEN 'muda',
+WHEN umur BETWEEN 17 AND 55 THEN '‘Dewasa’'
+ELSE 'tua' END AS status FROM pelanggan;
+
+3.	Tampilkan data produk: id, kode, nama, dan bonus untuk kode ‘TV01’ →’DVD Player’ , ‘K001’ → ‘Rice Cooker’ selain dari diatas ‘Tidak Ada’
+SELECT id,kode,nama,bonus,
+CASE
+WHEN kode = 'TV01' THEN 'DVD Player',
+WHEN kode = 'K001' THEN 'Rice Cooker'
+ELSE 'tidak ada'
+END AS bonus FROM promo;
+
+//soal 3.4
+1.	Tampilkan data statistik jumlah tempat lahir pelanggan
+SELECT COUNT(*) as JMLTEMPATLAHIR FROM tmp_lahir;
+
+2.	Tampilkan jumlah statistik produk berdasarkan jenis produk
+SELECT SUM(*) as produk FROM jenis_produk
+
+3.	Tampilkan data pelanggan yang usianya dibawah rata usia pelanggan
+SELECT nama, usia FROM pelanggan WHERE usia < (SELECT AVG(usia) FROM pelanggan);
+
+4.	Tampilkan data produk yang harganya diatas rata-rata harga produk
+SELECT nama, harga_jual FROM barang WHERE harga_jual >(SELECT AVG(harga_jual ))FROM bar
+
+5.	Tampilkan data pelanggan yang memiliki kartu dimana iuran tahunan kartu diatas 90rb
+SELECT nama ,kartu FROM pelanggan WHERE kartu>=(SELECT MIN(kartu )FROM pelanggan );
+
+6.	Tampilkan statistik data produk dimana harga produknya dibawah rata-rata harga produk secara keseluruhan
+SELECT nama, harga_jual FROM barang WHERE harga_jual < (SELECT AVG(harga_jual))
+
+7.	Tampilkan data pelanggan yang memiliki kartu dimana diskon kartu yang diberikan diatas 3%
+SELECT nama,diskon FROM pelanggan WHERE diskon>(SELECT MAX((diskon/100)*kartu)) FROM pelanggan;
