@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar DOM</title>
+  </head>
+  <body>
+    <div id="isi"></div>
+    <div class="warna">Mengubah element HMTL style color DOM</div>
+    <h2>Ini adalah contoh DOM tag</h2>
+    <script>
+      // menentukan elemen di HTML menggunakan innerHTML dengan mencar id nya.
+      document.getElementById("isi").innerHTML = "Hello DOM";
+
+      //   membuat element didalam javascript untuk ditampilkan kedalam HTML
+      let div = document.createElement("div");
+      div.id = "content";
+      div.innerText = "<p>Contoh menambahkan element</p>";
+      document.body.appendChild(div);
+      // mengubah element HTML menggunakan DOM style.
+      document.getElementById("warna").style.color = "blue";
+
+      let z = document.getElementsByTagName("h2");
+    </script>
+    <script>
+      // buat function void +> function yang tidak mengembalikan nilai/tidak menampilakan hasil proses
+      function salam(nama) {
+        document.write(`apa kabar ${nama} ?`);
+      }
+      let siswa = "khasan";
+      salam(siswa);
+    </script>
+  </body>
+</html>

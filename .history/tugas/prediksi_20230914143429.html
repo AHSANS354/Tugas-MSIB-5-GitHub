@@ -1,0 +1,43 @@
+<body>
+  <h1>Data Gempa Hari ini</h1>
+  <script>
+    class Gempa {
+      constructor(lokasi, skala) {
+        this.lokasi = lokasi;
+        this.skala = skala;
+      }
+
+      dampak() {
+        let dampak;
+        if (this.skala >= 0 && this.skala <= 2) {
+          dampak = "tidak terasa";
+        } else if (this.skala > 2 && this.skala <= 4) {
+          dampak = "bangunan retak-retak";
+        } else if (this.skala > 4 && this.skala <= 6) {
+          dampak = "bangunan roboh";
+        } else {
+          dampak = "bangunan roboh dan berpotensi tsunami";
+        }
+
+        document.write(`<br>Lokasi Gempa: ${this.lokasi}`);
+        document.write(`<br> Skala: ${this.skala}`);
+        document.write(`<br> Dampak: ${dampak}`);
+        document.write("<br> <hr>");
+      }
+    }
+
+    // Buat object gempa
+    const g1 = new Gempa("39 km dari Kota Ternate", 6.0);
+    const g2 = new Gempa("16 km dari Kabupaten Donggala", 6.0);
+    const g3 = new Gempa("10 km dari Adassil, Maroko", 6.8);
+    const g4 = new Gempa("33 km dari Jalisco, Meksiko", 5.8);
+    const g5 = new Gempa("12 km dari Burney, California", 5.0);
+
+    // Panggil fungsi dampak() untuk mencetak info gempa
+    g1.dampak();
+    g2.dampak();
+    g3.dampak();
+    g4.dampak();
+    g5.dampak();
+  </script>
+</body>

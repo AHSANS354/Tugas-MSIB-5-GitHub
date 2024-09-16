@@ -1,0 +1,46 @@
+<script>
+  // data diri
+  const nama = "Ridwan";
+  const jabatan = "Manager";
+  const status = "Menikah";
+  let gajipokok = 0;
+
+  switch (jabatan) {
+    case "Manager":
+      gajipokok = 15000000;
+      break;
+    case "Asisten Manager":
+      gajipokok = 10000000;
+      break;
+    case "Staff":
+      gajipokok = 5000000;
+      break;
+    default:
+      gajipokok = 0;
+  }
+
+  //   data gaji
+  let tunjangan_jabatan = 0.15 * gajipokok;
+  let BPJS = 0.1 * gajipokok;
+  let tunjangan_keluarga = status == "Menikah" ? 0.2 * gajipokok : "Maaf belum dapat";
+  let total_gaji = gajipokok + tunjangan_jabatan + tunjangan_keluarga + BPJS;
+
+  document.write(
+    "Nama : " +
+      nama +
+      "<br> Jabatan : " +
+      jabatan +
+      "<br> Status : " +
+      status +
+      "<br> Gaji Pokok : " +
+      gajipokok +
+      "<br> Tunjangan Jabatan : " +
+      tunjangan_jabatan +
+      "<br> Tunjangan Keluarga : " +
+      tunjangan_keluarga +
+      "<br> BPJS : " +
+      BPJS +
+      "<br> Total Gaji : " +
+      total_gaji
+  );
+</script>

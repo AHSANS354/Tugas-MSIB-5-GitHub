@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+      .row {
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      input {
+        border: none;
+        background-color: darkcyan;
+        color: whitesmoke;
+        padding: 10px 10px;
+      }
+      #cetak {
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input type="submit" value="Profil" id="profil" />
+        </div>
+        <div class="col">
+          <input type="submit" value="Moto" id="moto" />
+        </div>
+        <div class="col">
+          <input type="submit" value="Keahlian" id="keahlian" />
+        </div>
+      </div>
+      <div class="row">
+        <div id="cetak"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("#profil").on("click", function () {
+          $("#cetak").html(`
+        <h3>Profil</h3>
+        <p>Nama : Khasan Dullatif</p>
+        <p>Asal Kampus : STMIK AMIKOM Surakarta</p>
+        <p>Semester : 7 (tujuh)</p>
+          `);
+        });
+        $("#moto").on("click", function () {
+          $("#cetak").html(`
+            <h3>Moto Diri Saya</h3>
+            <p>
+                <b> Terus <i>Belajar dan Berkarya</i> untuk menjadikan nilai dalam diri menjadi tinggi</b>
+            </p>
+                `);
+        });
+        $("#keahlian").on("click", function () {
+          $("#cetak").html(`
+          <h3>Keahlian</h3>
+        <button>HTML</button><br><br>
+        <button>CSS</button><br>
+        <button>javascript</button><br>
+        <button>jquery</button><br>
+        <button>PHP</button><br>
+        <button>React Js</button><br>
+        <button>Vue Js</button><br>
+        <button>Next Js</button>`);
+        });
+      });
+    </script>
+  </body>
+</html>
